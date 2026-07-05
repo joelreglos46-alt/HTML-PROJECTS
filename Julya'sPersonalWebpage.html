@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Webpage - Joel T. Reglos</title>
+  <style>
+
+    body {
+      background-color: #fdf9ff;
+      font-family: Arial, sans-serif;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* TOP MARQUEE */
+    .top-marquee {
+      background-color: #6b3fa0;
+      color: white;
+      padding: 10px 0;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    /* HEADER */
+    .header {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 40px 20px 30px;
+      border-bottom: 3px solid #6b3fa0;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 6px solid #6b3fa0;
+      padding: 4px;
+      object-fit: cover;
+      object-position: top center;
+      background-color: #f3ecfc;
+      display: block;
+      margin: 0 auto 16px auto;
+    }
+
+    .my-name {
+      font-size: 32px;
+      color: #6b3fa0;
+      margin: 0 0 4px 0;
+    }
+
+    .my-title {
+      font-size: 15px;
+      color: #888;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    blockquote {
+      border-left: 4px solid #6b3fa0;
+      background-color: #f3ecfc;
+      margin: 16px auto;
+      padding: 12px 20px;
+      max-width: 600px;
+      font-style: italic;
+      color: #444;
+      font-size: 15px;
+    }
+
+    /* NAV */
+    nav {
+      background-color: #6b3fa0;
+      text-align: center;
+      padding: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #4a2878;
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 860px;
+      margin: 28px auto;
+      background-color: white;
+      padding: 28px 34px;
+      border: 1px solid #ddd;
+      border-top: 4px solid #6b3fa0;
+    }
+
+    .section h2 {
+      color: #6b3fa0;
+      font-size: 22px;
+      border-bottom: 2px solid #6b3fa0;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .section h3 {
+      color: #4a2878;
+      font-size: 16px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    .section p {
+      line-height: 1.85;
+      font-size: 15px;
+      color: #333;
+    }
+
+    /* INFO TABLE */
+    table.info-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    table.info-table td {
+      padding: 9px 12px;
+      border: 1px solid #d7b8f5;
+    }
+
+    table.info-table td:first-child {
+      background-color: #f3ecfc;
+      font-weight: bold;
+      width: 35%;
+      color: #6b3fa0;
+    }
+
+    /* HOBBIES LIST */
+    ul.hobby-list {
+      list-style: none;
+      padding: 0;
+      column-count: 2;
+    }
+
+    ul.hobby-list li {
+      padding: 6px 0;
+      font-size: 15px;
+      border-bottom: 1px dashed #d7b8f5;
+    }
+
+    /* SKILLS TABLE */
+    table.skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    table.skills-table th {
+      background-color: #6b3fa0;
+      color: white;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    table.skills-table td {
+      padding: 9px 14px;
+      border: 1px solid #d7b8f5;
+    }
+
+    table.skills-table tr:nth-child(even) td {
+      background-color: #f3ecfc;
+    }
+
+    /* AWARDS */
+    ul.awards-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.awards-list li {
+      padding: 10px 14px;
+      border: 1px solid #d7b8f5;
+      margin-bottom: 8px;
+      background-color: #fdf9ff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul.awards-list li:nth-child(odd) {
+      background-color: #f3ecfc;
+    }
+
+    /* QUOTES */
+    .quote-box {
+      border-left: 4px solid #6b3fa0;
+      background-color: #f3ecfc;
+      padding: 14px 20px;
+      margin-bottom: 14px;
+      font-style: italic;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .quote-box span {
+      display: block;
+      margin-top: 6px;
+      font-style: normal;
+      font-weight: bold;
+      color: #6b3fa0;
+      font-size: 13px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+      justify-content: center;
+    }
+
+    .gallery figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 240px;
+      height: 185px;
+      object-fit: cover;
+      border: 3px solid #6b3fa0;
+      padding: 3px;
+      background-color: #f3ecfc;
+      display: block;
+    }
+
+    .gallery figcaption {
+      font-size: 12px;
+      color: #6b3fa0;
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    /* CONTACT TABLE */
+    table.contact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    table.contact-table td {
+      padding: 10px 14px;
+      border: 1px solid #d7b8f5;
+    }
+
+    table.contact-table td:first-child {
+      background-color: #f3ecfc;
+      font-weight: bold;
+      color: #6b3fa0;
+      width: 30%;
+    }
+
+    table.contact-table a {
+      color: #6b3fa0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    table.contact-table a:hover {
+      text-decoration: underline;
+    }
+
+    /* BOTTOM MARQUEE */
+    .bottom-marquee {
+      background-color: #d7b8f5;
+      color: #4a2878;
+      padding: 9px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #4a2878;
+      color: #d7b8f5;
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 13px;
+      margin-top: 0;
+    }
+
+    footer strong {
+      color: #e8d5f7;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- TOP MARQUEE -->
+  <div class="top-marquee">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      &nbsp;&nbsp;&nbsp; 💜 Welcome to My Personal Webpage! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Hi, I'm Joel T. Reglos &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; BSIT 2nd Year — Isabela State University Roxas Campus &nbsp;&nbsp;&nbsp; 💜
+    </marquee>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <img src="profilephoto.jpg" alt="Joel T. Reglos" class="profile-pic">
+    <h1 class="my-name">Joel T. Reglos</h1>
+    <p class="my-title"> <i>An Aspiring I.T professional &nbsp;|&nbsp; Isabela State University — Roxas Campus</i> </p>
+
+    <blockquote>
+      <strong>"I am not who I used to be, and I'm still not finished becoming who I'm meant to be."</strong>
+    </blockquote>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#skills">Skills</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#family">Family</a>
+    <a href="#quotes">Quotes</a>
+    <a href="#goals">Goals</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ABOUT ME -->
+  <div class="section" id="about">
+    <h2>About Me</h2>
+
+    <p>
+      Hi! My name is <strong>Joel T. Reglos</strong>, but my friends call me <em>Julya</em>.
+      I am <strong>26 years old</strong> and currently a <strong>2nd Year BSIT student</strong>
+      at <strong>Isabela State University — Roxas Campus</strong> in Roxas, Isabela, Philippines.
+    </p>
+
+    <br>
+
+    <p>
+      People often say I look serious or intimidating when they first meet me. But once we get to know each other, they discover that I'm actually sweet, caring, funny, and a little chaotic. I love making people laugh, cracking jokes, and creating a comfortable atmosphere. I'm also a good listener and always willing to offer advice whenever someone needs it. If you earn my trust, you'll have a loyal, ride-or-die friend who will always have your back.
+    </p>
+
+    <br>
+
+    <p>
+      <del>There was a time when I doubted myself,</del> but I kept going.
+      Now I am <ins>more confident and more focused</ins> than ever before.
+      Every subject I take and every line of code I write brings me one step
+      closer to the person I am meant to become.
+    </p>
+
+    <br>
+
+    <table class="info-table">
+      <tr>
+        <td>Full Name</td>
+        <td>Joel T. Reglos (Julya)</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>26 years old</td>
+      </tr>
+      <tr>
+        <td>Course</td>
+        <td>Bachelor of Science in Information Technology (BSIT) <i>majoring in Web and Application Development</i></td>
+      </tr>
+      <tr>
+        <td>Year Level</td>
+        <td>2nd Year</td>
+      </tr>
+      <tr>
+        <td>University</td>
+        <td>Isabela State University — Roxas Campus</td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>Caliguian, Burgos, Isabela, Philippines</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section" id="education">
+    <h2>Education</h2>
+
+    <table class="info-table">
+      <tr>
+        <td>College</td>
+        <td>
+          <strong>Isabela State University — Roxas Campus</strong><br>
+          Bachelor of Science in Information Technology<br>
+          <em>2024 — Present</em>
+        </td>
+      </tr>
+      <tr>
+        <td>Senior High School</td>
+        <td>
+          <strong>Burgos National High School</strong><br>
+          Strand=Gas<br>
+          <em>Graduated 2018</em>
+        </td>
+      </tr>
+      <tr>
+        <td>Junior High School</td>
+        <td>
+          <strong>Burgos National High School</strong><br>
+          <em>Completed</em>
+        </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <p>
+      My favorite subjects when I was in High school  is <strong> Science</strong> and now one of my favorite subjects is 
+      <strong>IT ELEC 3</strong>. I love the hands-on nature of IT
+      because it lets me <em>build and create real things</em> that people can actually use.
+    </p>
+  </div>
+
+  <!-- ACHIEVEMENTS & AWARDS -->
+  <div class="section" id="achievements">
+    <h2>Achievements &amp; Awards</h2>
+
+    <p>
+      I am proud of the things I have accomplished both <strong>academically</strong>
+      and <em>extracurricular</em>. Here are some of my achievements:
+    </p>
+
+    <br>
+
+    <h3>🏆 Pageant &amp; Cultural Titles</h3>
+    <ul class="awards-list">
+      <li>
+        👑 <strong>Queen of Queens 2025</strong><br>
+        <em>Grand winner of the ISU Pageant — representing beauty, intelligence,excellence and proud to carry the banner of <b>IICT</b></em>
+      </li>
+      <li>
+        🌟 <strong>Pageant Candidate — Various Cultural Events</strong><br>
+        <em>Participated in multiple school and community pageants, showcasing talent and confidence (Dyosa ng Isabela,Pride Month Burgos,Xentro mall Runway,etc...)</em>
+      </li>
+    </ul>
+
+    <br>
+
+    <h3>🎓 Academic Recognitions</h3>
+    <ul class="awards-list">
+      <li>
+        📋 <strong>I graduated WITH HONORS</strong> — SHS <br>
+        <em>Successfully completed SHS with flying colors</em>
+      </li>
+      <li>
+        💻 <strong>Best Presenter</strong><br>
+        <em>during SHS Portfolio presentation</em>
+      </li>
+      <li>
+        🏫 <strong>Consistent BSIT Student</strong><br>
+        <em>Actively pursuing excellence in the field of Information Technology at ISU Roxas Campus</em>
+      </li>
+    </ul>
+
+    <br>
+
+    <blockquote>
+      "Every award is proof that hard work and believing in yourself truly pays off."
+    </blockquote>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section" id="skills">
+    <h2>My Skills</h2>
+
+    <p>Here are the skills I have developed as a BSIT student and as an individual:</p>
+
+    <br>
+
+    <h3>💻 Technical Skills</h3>
+    <table class="skills-table">
+      <tr>
+        <th>Skill</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>HTML</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>CSS (Cascading Style Sheets)</td>
+        <td>Beginner — Intermediate</td>
+      </tr>
+      <tr>
+        <td>Basic JavaScript</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>Microsoft Word</td>
+        <td>Proficient</td>
+      </tr>
+      <tr>
+        <td>Microsoft Excel</td>
+        <td>Intermediate</td>
+      </tr>
+      <tr>
+        <td>Microsoft PowerPoint</td>
+        <td>Proficient</td>
+      </tr>
+      <tr>
+        <td>Basic Programming (OOP)</td>
+        <td>Beginner</td>
+      </tr>
+      <tr>
+        <td>Canva (Design Tool)</td>
+        <td>Proficient</td>
+      </tr>
+    </table>
+
+    <br>
+
+    <h3>🌟 Personal Skills</h3>
+    <ul>
+      <li>Strong communication and interpersonal skills</li>
+      <li>Time management and organization</li>
+      <li>Fast learner and adaptable</li>
+      <li>Team player and collaborative</li>
+      <li>Creative thinking and problem solving</li>
+      <li>Public speaking and stage presence</li>
+    </ul>
+  </div>
+
+  <!-- HOBBIES -->
+  <div class="section" id="hobbies">
+    <h2>Hobbies &amp; Interests</h2>
+
+    <p>When I am not studying, here are the things I love to do:</p>
+
+    <br>
+
+    <ul class="hobby-list">
+      <li>💻 &nbsp; Browsing in the internet</li>
+      <li>📸 &nbsp; Photography</li>
+      <li>🎵 &nbsp; Listening to Music</li>
+      <li>📚 &nbsp; Reading Books and Articles especially random facts or science related articles </li>
+      <li>🎬 &nbsp; Watching Movies and Series</li>
+      <li>✈️ &nbsp; Strolling and Hanging out with my friends</li>
+      <li>🍳 &nbsp; Cooking Filipino Food such as pansit,adobo and baking</li>
+      <li>🌿 &nbsp; Spending Time with my loved ones</li>
+    </ul>
+
+    <br>
+
+    <blockquote>
+      "The best hobbies are the ones that make you lose track of time." — Unknown
+    </blockquote>
+  </div>
+
+  <!-- FAMILY -->
+  <div class="section" id="family">
+    <h2>My Family</h2>
+
+    <p>
+      My family is my <strong>greatest source of strength and inspiration</strong>.
+      Everything I do, I do it for them. No matter how difficult school gets,
+      knowing that my family is behind me keeps me going every single day.
+    </p>
+
+    <br>
+
+    <p>
+      I come from <em>Caliguian, Burgos, Isabela</em> — a small but close-knit community
+      where family values and <strong>bayanihan spirit</strong> are deeply rooted.
+      Growing up here taught me the importance of <mark>hard work, humility, and gratitude</mark>.
+    </p>
+
+    <br>
+
+    <p>
+      My family may not have everything, but we have <strong>each other</strong> —
+      and that has always been more than enough to keep me motivated to
+      <em>work hard and make them proud.</em>
+    </p>
+
+    <br>
+
+    <img src="familyphoto.jpg" alt="My Family" style="width: 100%; max-width: 500px; border: 3px solid #6b3fa0; padding: 3px; display: block; margin: 0 auto;">
+
+    <br>
+
+    <blockquote>
+      "Family is not an important thing. It's everything." — Michael J. Fox
+    </blockquote>
+  </div>
+
+  <!-- FAVORITE QUOTES -->
+  <div class="section" id="quotes">
+    <h2>Favorite Quotes</h2>
+
+    <p>These are the quotes that keep me going every day:</p>
+
+    <br>
+
+    <div class="quote-box">
+      "I am not who I used to be, and I'm still not finished becoming who I'm meant to be."
+      <span>— My Personal Mantra</span>
+    </div>
+
+    <div class="quote-box">
+      "The secret of getting ahead is getting started. Stop waiting for the perfect moment — take the moment and make it perfect."
+      <span>— Mark Twain</span>
+    </div>
+
+    <div class="quote-box">
+      "Don't watch the clock. Do what it does — keep going. Every small step forward is still progress."
+      <span>— Sam Levenson</span>
+    </div>
+
+    <div class="quote-box">
+      "You are braver than you believe, stronger than you seem, and smarter than you think."
+      <span>— A.A. Milne</span>
+    </div>
+
+    <div class="quote-box">
+      "Education is the passport to the future, for tomorrow belongs to those who prepare for it today."
+      <span>— Malcolm X</span>
+    </div>
+  </div>
+
+  <!-- MY GOALS -->
+  <div class="section" id="goals">
+    <h2>My Goals &amp; Dream Career</h2>
+
+    <h3>Short-Term Goals</h3>
+    <ol>
+      <li>Finish my BSIT degree with excellent grades.</li>
+      <li>Master HTML, CSS, and JavaScript.</li>
+      <li>Build a complete personal portfolio website.</li>
+      <li>Pass all my subjects this semester.</li>
+    </ol>
+
+    <br>
+
+    <h3>Long-Term Goals</h3>
+    <ol>
+      <li>Become a <strong>Full-Stack Web Developer or a Data Analyst</strong>.</li>
+      <li>Work in a reputable tech company in the Philippines or abroad.</li>
+      <li>Help my family through the career I build.</li>
+      <li>Give back to my community in Burgos, Isabela someday.</li>
+    </ol>
+
+    <br>
+
+    <p>
+      My dream is to become a <strong>Full-Stack Web Developer</strong> who builds
+      websites and applications that <em>actually help people</em>. I know it takes
+      time and a lot of practice, but I am willing to put in the work every single day.
+    </p>
+
+    <br>
+
+    <blockquote>
+      "Dream big. Work hard. Stay humble." — Unknown
+    </blockquote>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="section" id="gallery">
+    <h2>My Photo Gallery</h2>
+
+    <p>Here are some of my favorite photos and memories:</p>
+
+    <br>
+
+    <div class="gallery">
+      <figure>
+        <img src="photoone.jpg" alt="Photo 1">
+        <figcaption>When I won the Queen of Queens IICT 2024</figcaption>
+      </figure>
+      <figure>
+        <img src="photo2.jpg" alt="Photo 2">
+        <figcaption>Pride March celebration in our municipality</figcaption>
+      </figure>
+      <figure>
+        <img src="photothree.jpg" alt="Photo 3">
+        <figcaption>Squad photo</figcaption>
+      </figure>
+      <figure>
+        <img src="photofour.jpg" alt="Photo 4">
+        <figcaption>Fell inlove with this painting</figcaption>
+      </figure>
+      <figure>
+        <img src="photofive.jpg" alt="Photo 5">
+        <figcaption>Love this scenery</figcaption>
+      </figure>
+      <figure>
+        <img src="photosix.jpg" alt="Photo 6">
+        <figcaption>My Baby</figcaption>
+      </figure>
+    </div>
+
+    <br>
+
+    <p style="font-size: 13px; color: #888; font-style: italic;">
+
+    </p>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="section" id="contact">
+    <h2>Contact Me</h2>
+
+    <p>
+      Feel free to reach out! I am always open to new connections
+      and I would love to hear from you. 😊
+    </p>
+
+    <br>
+
+    <table class="contact-table">
+      <tr>
+        <td>📧 Gmail</td>
+        <td><a href="mailto:joelreglos46@gmail.com">joelreglos46@gmail.com</a></td>
+      </tr>
+      <tr>
+        <td>📘 Facebook</td>
+        <td><a href="https://www.facebook.com/julyasolger28" target="_blank">facebook.com/julyasolger</a></td>
+      </tr>
+      <tr>
+      <tr>
+        <td>📍 Address</td>
+        <td>Caliguian, Burgos, Isabela, Philippines</td>
+      </tr>
+      <tr>
+        <td>🏫 School</td>
+        <td>
+          <a href="https://isu.edu.ph" target="_blank">Isabela State University — Roxas Campus</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- BOTTOM MARQUEE -->
+  <div class="bottom-marquee">
+    <marquee behavior="scroll" direction="right" scrollamount="4">
+      &nbsp;&nbsp;&nbsp; 💜 Thank you for visiting my webpage! &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Joel T. Reglos — BSIT 2nd Year &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; ISU Roxas Campus &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; "Keep going. Keep growing." &nbsp;&nbsp;&nbsp; 💜
+    </marquee>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      &copy; 2026 &nbsp;|&nbsp; <strong>Joel T. Reglos</strong> &nbsp;|&nbsp;
+      BSIT 2nd Year &nbsp;|&nbsp; IT-ELEC-3 Final Project &nbsp;|&nbsp;
+      Isabela State University — Roxas Campus
+    </p>
+    <p style="margin-top: 6px; color: #c9a8e8;">
+      <em>"I am not who I used to be, and I'm still not finished becoming who I'm meant to be."</em>
+    </p>
+  </footer>
+
+</body>
+</html>
